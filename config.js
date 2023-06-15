@@ -1,4 +1,8 @@
 module.exports = {
+  DB_USER: process.env.NODEJS_USER_MANAGEMENT_DB_USER,
+  DB_PASSWORD: process.env.NODEJS_USER_MANAGEMENT_DB_PASSWORD,
+  DB_NAME: 'telegram',
+  DB_COLLECTION: 'subscriptions',
   TOKEN_BOT: process.env.KHITROV_SUBSCRIPTION_BOT_TOKEN,
   PRETTY_LOGGING: process.env.PRETTY_LOGGING,
   TOKEN_WEATHER_API: process.env.OPEN_WEATHER_MAP_TOKEN,

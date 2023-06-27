@@ -5,8 +5,8 @@
 ### 3.5 Subscription bot.
 
 #### Task.
-
 Create a telegram bot where users can subscribe to weather forecast notification. Every day at the chosen time at UTC timezone this bot should send what weather is expected today. Subscriptions should be stored at MongoDB. For learning purposes you should run cron and telegram bot in one process, which is bad practice, because it blocks the scaling application.
+Design proposal should include commands, database schema and flows.
 #### Bot.
 ```
 name: KhitrovSubscriptionBot

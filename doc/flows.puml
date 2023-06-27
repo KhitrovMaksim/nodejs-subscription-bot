@@ -1,0 +1,37 @@
+@startuml
+participant Actor   order 10 [
+                     =Actor
+                     ----
+                     ""Telegram""
+                 ]
+participant App      order 30
+database    Mongo    order 40
+Actor -> App : command: /start
+activate App
+App --> Actor : message: Menu
+deactivate App
+Actor -> App : command: /subscribe
+activate App
+App --> Actor : message: send location
+Actor -> App : message: location
+App --> Actor : message: send time
+Actor -> App : message: time
+App -> App : save
+activate App
+App -> App: add cron job
+App -> Mongo : save user data
+deactivate App
+App --> Actor : message: success
+deactivate App
+Actor -> App : command: /info
+activate App
+App -> Mongo : get user data
+Mongo --> App : user data
+App --> Actor : message: time and location
+deactivate App
+Actor -> App : command: /unsubscribe
+activate App
+App -> Mongo : delete user data
+App --> Actor : message: success
+deactivate App
+@enduml

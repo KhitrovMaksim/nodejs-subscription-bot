@@ -29,9 +29,12 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "node-telegram-bot-api": "^0.61.0",
+    "cron": "^2.3.1",
+    "mongodb": "4.1",
+    "mongoose": "^7.0.0",
     "pino": "^8.10.0",
-    "pino-pretty": "^9.2.0"
+    "pino-pretty": "^9.2.0",
+    "telegraf": "^3.40.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.20.7",
@@ -45,7 +48,7 @@
     "eslint-plugin-prettier": "^4.2.1",
     "husky": "^8.0.0",
     "lint-staged": "^13.1.2",
-    "nodemon": "^2.0.20",
+    "nodemon": "^2.0.22",
     "prettier": "2.8.3"
   }
 }
